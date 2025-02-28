@@ -174,11 +174,23 @@ async function fetchISSData() {
 // Fetch astronaut data
 async function fetchAstronautData() {
     try {
-        const response = await fetch('http://api.open-notify.org/astros.json');
+        const response = await fetch('https://thingproxy.freeboard.io/fetch/http://api.open-notify.org/astros.json');
+
+        // Check if the response is ok (status 200-299)
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        // Try parsing the response as JSON
         const data = await response.json();
         updateAstronauts(data);
     } catch (error) {
+        // Log the error and provide additional details
         console.error('Error fetching astronaut data:', error);
+
+        // Handle error gracefully, e.g., show a message to the user
+        const astronautList = document.getElementById('astronaut-list');
+        astronautList.innerHTML = `<li>Failed to load astronaut data. Please try again later.</li>`;
     }
 }
 
