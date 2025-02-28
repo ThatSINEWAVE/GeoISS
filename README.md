@@ -32,7 +32,7 @@ GeoISS is a web application that allows you to track the location of the Interna
 If you want to deploy the application locally or contribute to the code, start by cloning this repository:
 
 ```bash
-git clone <repository_url>
+git clone [<repository_url>](https://github.com/ThatSINEWAVE/GeoISS.git)
 ```
 
 ### 2. Files
