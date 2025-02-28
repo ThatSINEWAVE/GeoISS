@@ -174,7 +174,7 @@ async function fetchISSData() {
 // Fetch astronaut data
 async function fetchAstronautData() {
     try {
-        const response = await fetch('https://thingproxy.freeboard.io/fetch/http://api.open-notify.org/astros.json');
+        const response = await fetch('https://corsproxy.io/?http://api.open-notify.org/astros.json');
 
         // Check if the response is ok (status 200-299)
         if (!response.ok) {
