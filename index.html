@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISS Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>International Space Station Tracker</h1>
+        <p>Track the ISS in real-time and see who's in space</p>
+      </header>
+      <div class="content">
+        <div id="map"></div>
+        <div class="info-panel">
+          <div class="info-section">
+            <h2>Current Location</h2>
+            <div class="data-item">
+              <span class="data-label">Latitude:</span>
+              <span id="latitude" class="data-value">Loading...</span>
+            </div>
+            <div class="data-item">
+              <span class="data-label">Longitude:</span>
+              <span id="longitude" class="data-value">Loading...</span>
+            </div>
+            <div class="data-item">
+              <span class="data-label">Altitude:</span>
+              <span id="altitude" class="data-value">Loading...</span>
+            </div>
+            <div class="data-item">
+              <span class="data-label">Velocity:</span>
+              <span id="velocity" class="data-value">Loading...</span>
+            </div>
+            <div class="data-item">
+              <span class="data-label">Visibility:</span>
+              <span id="visibility" class="data-value">Loading...</span>
+            </div>
+          </div>
+          <div class="info-section">
+            <h2>Astronauts in Space</h2>
+            <div id="astronaut-count" class="data-item">
+              <span class="data-label">Total:</span>
+              <span class="data-value">Loading...</span>
+            </div>
+            <ul id="astronaut-list" class="astronaut-list">
+              <li>Loading astronaut data...</li>
+            </ul>
+          </div>
+          <div id="update-time" class="update-time"> Last updated: -- </div>
+          <button id="refresh-button" class="refresh-button"> Refresh Data </button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
